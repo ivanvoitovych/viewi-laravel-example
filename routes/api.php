@@ -28,3 +28,11 @@ Route::get('posts/{id}', function (string $id) {
     $postModel->Version = 1;
     return new JsonResponse($postModel);
 });
+
+Route::post('posts/{id}', function (string $id) {
+    $postModel          = new PostModel();
+    $postModel->Id      = (int) $id;
+    $postModel->Name    = 'Laravel ft. Viewi';
+    $postModel->Version = 1;
+    return new JsonResponse($postModel);
+});

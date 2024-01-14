@@ -18,7 +18,7 @@ class HomePage extends BaseComponent
 
     public function init()
     {
-        $this->http->get('/api/posts/5')->then(function (PostModel $data) {
+        $this->http->post('/api/posts/5')->then(function (PostModel $data) {
             $this->post = $data;
         }, function ($error) {
             echo $error;
